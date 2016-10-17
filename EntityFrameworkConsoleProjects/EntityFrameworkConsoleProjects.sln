@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab1.1.3 DatabaseFirst", "E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab1.1.2 CodeFirst", "lab1.1.2 CodeFirst\lab1.1.2 CodeFirst.csproj", "{3D32CA8A-07CA-494B-BC59-C1DE0A7FBFA8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code(Class)First2.1", "Code(Class)First2.1\Code(Class)First2.1.csproj", "{64C9AEC0-27DD-428C-B61F-3193C7C50796}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMediaApp", "MyMediaApp\MyMediaApp.csproj", "{C45F16D6-B4F4-4957-866A-9EFA45F3553C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{3D32CA8A-07CA-494B-BC59-C1DE0A7FBFA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D32CA8A-07CA-494B-BC59-C1DE0A7FBFA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D32CA8A-07CA-494B-BC59-C1DE0A7FBFA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64C9AEC0-27DD-428C-B61F-3193C7C50796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64C9AEC0-27DD-428C-B61F-3193C7C50796}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64C9AEC0-27DD-428C-B61F-3193C7C50796}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64C9AEC0-27DD-428C-B61F-3193C7C50796}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C45F16D6-B4F4-4957-866A-9EFA45F3553C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C45F16D6-B4F4-4957-866A-9EFA45F3553C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C45F16D6-B4F4-4957-866A-9EFA45F3553C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C45F16D6-B4F4-4957-866A-9EFA45F3553C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

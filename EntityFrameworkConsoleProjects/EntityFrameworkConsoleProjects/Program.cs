@@ -43,16 +43,21 @@ namespace FirstDemo
                 customer.LastName = "Ljungqvist";
                 customer.MiddleName = "Erik Albin";
                 customer.StreetAdress = "Pickolagränd 3";
+
+                //Hämta ut CityID för GNOSJO.
                 customer.CityID = context.tblCity.Where(c => c.City == "GNOSJO").Select(c => c.CityID).First();
 
                 var postalcode = new tblPostalCode();
 
+
+                // Lägga till en ny postalcode.
                 postalcode.PostalCode = "33233";
 
                 context.tblPostalCode.Add(postalcode);
 
                 context.SaveChanges();
 
+                // Plocka ut idt från en tabel.
                 customer.PostalCodeID = context.tblPostalCode.Where(pc => pc.PostalCode == "33233").Select(pc => pc.PostalCodeID).First();
                 context.tblCustomer.Add(customer);
 
