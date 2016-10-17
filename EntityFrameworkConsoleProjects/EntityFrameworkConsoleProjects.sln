@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstDemo", "EntityFrameworkConsoleProjects\FirstDemo.csproj", "{0745E37F-10F7-4769-A05E-090335749E44}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab1.1.3 DatabaseFirst", "EntityFrameworkConsoleProjects\Lab1.1.3 DatabaseFirst.csproj", "{0745E37F-10F7-4769-A05E-090335749E44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab1.1.2 CodeFirst", "lab1.1.2 CodeFirst\lab1.1.2 CodeFirst.csproj", "{3D32CA8A-07CA-494B-BC59-C1DE0A7FBFA8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{0745E37F-10F7-4769-A05E-090335749E44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0745E37F-10F7-4769-A05E-090335749E44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0745E37F-10F7-4769-A05E-090335749E44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D32CA8A-07CA-494B-BC59-C1DE0A7FBFA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D32CA8A-07CA-494B-BC59-C1DE0A7FBFA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D32CA8A-07CA-494B-BC59-C1DE0A7FBFA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D32CA8A-07CA-494B-BC59-C1DE0A7FBFA8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
