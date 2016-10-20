@@ -11,10 +11,10 @@ namespace MyMediaApp
         static void Main(string[] args)
         {
             var book = new Book();
-            book.BookName = "Nalle Puh";
-            Helper.Insert(book);
-            var books = Helper.GetAllBooks();
-            books.ForEach(x => Console.WriteLine(x));
+            //book.BookName = "Pippi Långstrump";
+            //Helper.Insert(book);
+            var result = Helper.GetAll(book);
+            result.ForEach(x => Console.WriteLine(x.BookID + " " + x.BookName));
             Console.WriteLine("Enter Book ID: ");
             var input = Console.ReadLine();
             Console.WriteLine("Enter new book name");
@@ -23,9 +23,20 @@ namespace MyMediaApp
             bookToUpdate.BookID = Convert.ToInt32(input);
             bookToUpdate.BookName = newName;
 
-            Helper.UpdateBookByID(bookToUpdate);
+            Helper.UpdateEntity(bookToUpdate);
 
-            var newBooks = Helper.GetAllBooks();
+            var newBooks = Helper.GetAll(book);
+
+            newBooks.ForEach(x => Console.WriteLine(x.BookID + " : " + x.BookName));
+
+            var movie = new Movie();
+            movie.MovieName = "Dallas";
+            //Helper.Insert(movie);
+
+            var movieResult = Helper.GetAll(movie);
+
+            movieResult.ForEach(x => Console.WriteLine(x.MovieName));
+
 
             Console.ReadKey();
 

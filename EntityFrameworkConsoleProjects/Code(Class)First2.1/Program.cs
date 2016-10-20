@@ -12,10 +12,7 @@ namespace Code_Class_First2._1
         {
             using (var ctx = new Championship())
             {
-                Player player = new Player()
-                {
-                    PlayerName = "Chuck Norris"
-                 };
+                Player player = new Player("Chuck Norris");
                 
             ctx.Players.Add(player);
             ctx.SaveChanges();

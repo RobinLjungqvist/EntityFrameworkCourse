@@ -9,29 +9,30 @@ namespace MyMediaApp
 {
     public static class Helper
     {
-        public static MediaContext ctx = new MediaContext();
         #region Book Crud
-        public static void Insert(this Book book)
+        public static void Insert<T>(T entity) where T: class
         {
-            using(ctx)
+            using(var ctx = new MediaContext())
             {
-                ctx.Books.Add(book);
+                ctx.Set<T>().Add(entity);
                 ctx.SaveChanges();
             }
         }
-        public static List<string> GetAllBooks()
+        public static List<T> GetAll<T>(T entity) where T : class
         {
-            List<string> books = new List<string>();
-            using (ctx)
+            List<T> result = new List<T>();
+            using (var ctx = new MediaContext())
             {
-                var dbBooks = from x in ctx.Books select x;
-                dbBooks.ForEachAsync(x => books.Add(x.BookID + " : " + x.BookName));
+                DbSet<T> dbSet = ctx.Set<T>();
+                var entities = from x in dbSet select x;
+                result.AddRange(entities);
+
             }
-            return books;
+            return result;
         }
         public static Book GetBookByName(string name)
         {
-            using (ctx)
+            using (var ctx = new MediaContext())
             {
                 var result = from b in ctx.Books
                              where b.BookName == name
@@ -40,30 +41,29 @@ namespace MyMediaApp
                 return result.First();
             }
         }
-        public static void RemoveBook(Book book)
+        public static void RemoveEntity<T>(T entity) where T : class
         {
-            using (ctx)
+            using (var ctx = new MediaContext())
             {
-                ctx.Books.Remove(book);
+                DbSet<T> dbSet = ctx.Set<T>();
+                dbSet.Remove(entity);
                 ctx.SaveChanges();
             }
         }
         public static void DeleteBookByID(int id)
         {
-            using (ctx)
+            using (var ctx = new MediaContext())
             {
                 var bookToRemove = from x in ctx.Books where x.BookID == id select x;
                 ctx.Books.Remove(bookToRemove.FirstOrDefault());
             }
         }
 
-        public static void UpdateBookByID(Book book)
+        public static void UpdateEntity<T>(T entity) where T : class
         {
-            using (ctx)
+            using (var ctx = new MediaContext())
             {
-                var bookToUpdate = ctx.Books.First(x => x.BookID == book.BookID);
-
-                bookToUpdate.BookName = book.BookName;
+                ctx.Entry(entity).State = EntityState.Modified;
                 ctx.SaveChanges();
 
             }
