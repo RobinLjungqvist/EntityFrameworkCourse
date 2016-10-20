@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code(Class)First2.1", "Code
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMediaApp", "MyMediaApp\MyMediaApp.csproj", "{C45F16D6-B4F4-4957-866A-9EFA45F3553C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseFirst 2.2 - 2.4", "DatabaseFirst\DatabaseFirst 2.2 - 2.4.csproj", "{B1EFE228-AF6D-42F6-893F-36C684C94792}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseFirst", "DatabaseFirst\DatabaseFirst.csproj", "{B1EFE228-AF6D-42F6-893F-36C684C94792}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
