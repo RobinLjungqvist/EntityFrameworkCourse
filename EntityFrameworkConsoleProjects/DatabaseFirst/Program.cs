@@ -42,6 +42,7 @@ namespace DatabaseFirst
                     ". Payment method: " + authorToDisplay.PaymetMethod);
 
             }
+
             Console.ReadKey();
         }
     }

@@ -37,7 +37,6 @@ namespace MyMediaApp
 
             movieResult.ForEach(x => Console.WriteLine(x.MovieName));
 
-
             Console.ReadKey();
 
         }
