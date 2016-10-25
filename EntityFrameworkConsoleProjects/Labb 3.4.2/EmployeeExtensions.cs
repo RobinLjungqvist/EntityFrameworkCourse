@@ -58,5 +58,19 @@ namespace Labb_3._4._2
 
             return emp;
         }
+        public static List<Employee> GetAllOverTheAgeOf(this List<Employee> list, int age)
+        {
+            var ageToCompare = DateTime.Now.AddYears(-age);
+
+            var selectedEmployees = list.Where(x => DateTime.Compare(x.Age, ageToCompare) <= 0).ToList();
+            return selectedEmployees;
+        }
+        public static List<Employee> GetAllUnderTheAgeOf(this List<Employee> list, int age)
+        {
+            var ageToCompare = DateTime.Now.AddYears(-age);
+
+            var selectedEmployees = list.Where(x => x.Age.CompareTo(ageToCompare) >= 0).ToList();
+            return selectedEmployees;
+        }
     }
 }

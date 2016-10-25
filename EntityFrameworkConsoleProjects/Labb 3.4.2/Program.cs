@@ -21,7 +21,10 @@ namespace Labb_3._4._2
 3. ShowAllEmploytees sorted by LastName
 4. ShowAllEmployees from certain department
 5. ShowAllEmployees hired this year
-6. Show first Employee from certain department");
+6. Show first Employee from certain department
+7. Show Employees over a Certain Age
+8. Show Employees under a Certain Age
+");
 
                 var key = Console.ReadKey(true);
 
@@ -55,6 +58,36 @@ namespace Labb_3._4._2
                             Console.WriteLine(employee.ToString());
                         }
                         break;
+                    case ConsoleKey.D7:
+                        int ageOver;
+                        var inputOver = GetUserInput("Enter an age to search for users over that age: ");
+                        if(int.TryParse(inputOver, out ageOver))
+                        {
+                           
+                            var employeesOverCertainAge = employees.GetAllOverTheAgeOf(ageOver);
+                            employeesOverCertainAge.Display();
+
+                        }
+                        else
+                        {
+                            Console.WriteLine("You didn't enter a valid number.");
+                        }
+                        break;
+                    case ConsoleKey.D8:
+                        int ageUnder;
+                        var inputUnder = GetUserInput("Enter an age to search for users under that age: ");
+                        if (int.TryParse(inputUnder, out ageUnder))
+                        {
+
+                            var employeesOverCertainAge = employees.GetAllUnderTheAgeOf(ageUnder);
+                            employeesOverCertainAge.Display();
+
+                        }
+                        else
+                        {
+                            Console.WriteLine("You didn't enter a valid number.");
+                        }
+                        break;
                     default:
                         break;
                 }
@@ -81,7 +114,7 @@ namespace Labb_3._4._2
             employees.Add(new Employee(2, "Adam", "Svensson", DateTime.Now.AddDays(-72), "Warehouse", DateTime.Now.AddYears(-32)));
             employees.Add(new Employee(3, "Anders", "Illomeri", DateTime.Now.AddYears(-32), "Warehouse", DateTime.Now.AddYears(-52)));
             employees.Add(new Employee(4, "Lina", "Johansson", DateTime.Now.AddYears(-2), "Production", DateTime.Now.AddYears(-22)));
-            employees.Add(new Employee(5, "Emma", "Johansson", DateTime.Now.AddYears(-2), "Production", DateTime.Now.AddYears(-25)));
+            employees.Add(new Employee(5, "Emma", "Johansson", DateTime.Now.AddYears(-2), "Production", DateTime.Now.AddYears(-25).AddDays(7)));
             employees.Add(new Employee(6, "Björn", "Lundberg", DateTime.Now.AddYears(-10), "Management", DateTime.Now.AddYears(-46)));
             employees.Add(new Employee(7, "Lennart", "Andersson", DateTime.Now.AddYears(-35), "Management", DateTime.Now.AddYears(-62)));
             employees.Add(new Employee(8, "Lena", "Nilsson", DateTime.Now.AddYears(-10), "WareHouse", DateTime.Now.AddYears(-50)));

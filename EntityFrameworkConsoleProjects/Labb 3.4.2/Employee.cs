@@ -28,7 +28,7 @@ namespace Labb_3._4._2
 
         public override string ToString()
         {
-            return $@"{FirstName} + {LastName}, {DateTime.Now.Year - Age.Year}
+            return $@"{FirstName} + {LastName}, {DateTime.Now - Age}
 Hire Date: {HireDate} 
 Department: {Department}
 ----------------------------------------";
