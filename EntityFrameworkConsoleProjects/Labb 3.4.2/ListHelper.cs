@@ -6,17 +6,7 @@ using System.Threading.Tasks;
 
 namespace Labb_3._4._2
 {
-    class Program
+    class ListHelper
     {
-        static void Main(string[] args)
-        {
-
-            var app = new Application();
-
-            app.Run();
-
-        }
-
-        
     }
 }
