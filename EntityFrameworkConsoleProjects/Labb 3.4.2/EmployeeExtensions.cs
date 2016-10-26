@@ -35,11 +35,12 @@ namespace Labb_3._4._2
         {
             var searchTerm = search.ToLower();
 
-            IEnumerable<Employee> result;
+            List<Employee> result;
 
-            result = list.Where(x => x.FirstName.Contains(search));
-            result = list.Where(x => x.LastName.Contains(search));
-            result = list.Where(x => x.Department.Contains(search));
+            result = list.Where(x => x.FirstName.ToLower().StartsWith(search)).ToList();
+            result.AddRange(list.Where(x => x.LastName.ToLower().StartsWith(search))); 
+            result.AddRange(list.Where(x => x.Department.ToLower().StartsWith(search))); 
+
 
             List<Employee> returnResult = result.ToList();
 

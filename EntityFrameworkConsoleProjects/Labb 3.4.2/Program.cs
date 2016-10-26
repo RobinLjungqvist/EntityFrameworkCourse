@@ -24,6 +24,7 @@ namespace Labb_3._4._2
 6. Show first Employee from certain department
 7. Show Employees over a Certain Age
 8. Show Employees under a Certain Age
+9. Search
 ");
 
                 var key = Console.ReadKey(true);
@@ -87,6 +88,11 @@ namespace Labb_3._4._2
                         {
                             Console.WriteLine("You didn't enter a valid number.");
                         }
+                        break;
+                    case ConsoleKey.D9:
+                        var userInput = GetUserInput("Please enter a searchterm: ");
+                        var searchResult = employees.SearchEmployee(userInput);
+                        searchResult.Display();
                         break;
                     default:
                         break;

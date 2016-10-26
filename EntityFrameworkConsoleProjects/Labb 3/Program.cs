@@ -17,7 +17,7 @@ namespace Labb_3
                 try
                 {
                     //var inputNumber = Helper.StringToDouble(input);
-                    var inputNumber = input.ToFloat();
+                    var inputNumber = input.Replace('.',',').ToFloat();
                     Console.WriteLine(inputNumber * 12);
                     Console.ReadKey();
                     return;
