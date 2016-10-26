@@ -127,7 +127,6 @@ namespace Labb_3._4._2
             employees.Add(new Employee(8, "Lena", "Nilsson", DateTime.Now.AddYears(-10), "WareHouse", DateTime.Now.AddYears(-50)));
 
 
-
             return employees;
 
         }
