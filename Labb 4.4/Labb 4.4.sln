@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labb 4.4", "Labb 4.4\Labb 4.4.csproj", "{6CB634EE-D842-46C0-AC15-A6D54AD46942}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBHelper", "DBHelper\DBHelper.csproj", "{B131459D-CED9-47EF-95BB-FA1501822CC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebbApp", "WebbApp\WebbApp.csproj", "{8FB70315-350F-44BD-BF52-06C30D9AB217}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6CB634EE-D842-46C0-AC15-A6D54AD46942}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6CB634EE-D842-46C0-AC15-A6D54AD46942}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6CB634EE-D842-46C0-AC15-A6D54AD46942}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6CB634EE-D842-46C0-AC15-A6D54AD46942}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B131459D-CED9-47EF-95BB-FA1501822CC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B131459D-CED9-47EF-95BB-FA1501822CC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B131459D-CED9-47EF-95BB-FA1501822CC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B131459D-CED9-47EF-95BB-FA1501822CC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FB70315-350F-44BD-BF52-06C30D9AB217}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FB70315-350F-44BD-BF52-06C30D9AB217}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FB70315-350F-44BD-BF52-06C30D9AB217}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FB70315-350F-44BD-BF52-06C30D9AB217}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
