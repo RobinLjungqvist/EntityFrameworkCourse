@@ -25,6 +25,7 @@ namespace Labb_4._3
         public string LastName { get; set; }
         public string HomeTel { get; set; }
         public Nullable<Labb_4._3.PaymentMethods> PaymetMethod { get; set; }
+        public Nullable<int> Age { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Titles> Titles { get; set; }

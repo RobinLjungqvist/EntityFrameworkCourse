@@ -34,14 +34,27 @@ namespace Labb_4._3
 
         }
 
-        public void InsertAuthor(string name, string lastName, string telNr, PaymentMethods paymentMethod)
+        public string InsertAuthor(string name, string lastName, int age, string telNr, PaymentMethods paymentMethod)
         {
-            var author = new Authors() { FirstName = name, LastName = lastName, HomeTel = telNr, PaymetMethod = paymentMethod };
-            using(var ctx = new BooksContext())
+            var author = new Authors() { FirstName = name, LastName = lastName, Age = age, HomeTel = telNr, PaymetMethod = paymentMethod };
+            string message = string.Empty;
+            try
             {
-                ctx.Authors.Add(author);
-                ctx.SaveChanges();
+                using (var ctx = new BooksContext())
+                {
+                    ctx.Authors.Add(author);
+                    ctx.SaveChanges();
+                    message = "Author was added";
+                }
             }
+            catch (Exception e)
+            {
+                message = "Couldn't add author";
+                throw e;
+
+                
+            }
+                return message;
         }
 
         public Authors GetAuthorByID(int id)
@@ -68,19 +81,32 @@ namespace Labb_4._3
                 }
                 else
                 {
-                    return $"No author was find with {id} as id";
+                    return $"No author was found with id: {id}";
                 }
             }
 
         }
 
-        public void UpdateAuthor(Authors author)
+        public string UpdateAuthor(Authors author)
         {
-            using (var ctx = new BooksContext())
+            string message = string.Empty;
+
+            try
             {
-                ctx.Entry(author).State = EntityState.Modified;
-                ctx.SaveChanges();
+                using (var ctx = new BooksContext())
+                {
+                    ctx.Entry(author).State = EntityState.Modified;
+                    ctx.SaveChanges();
+                    message = "Author was updated.";
+                }
             }
+            catch (Exception ex)
+            {
+                message = "Couldn't update author";
+                throw ex;
+            }
+
+            return message;
             
         }
 
@@ -88,10 +114,11 @@ namespace Labb_4._3
         {
             using(var ctx = new BooksContext())
             {
-                var authors = ctx.Authors.Where(x => x.FirstName.StartsWith(search) && x.LastName.StartsWith(search)).ToList();
+                var authors = ctx.Authors.Where(x => x.FirstName.StartsWith(search) || x.LastName.StartsWith(search)).ToList();
                 return authors;
             }
         }
+
 
 
     }

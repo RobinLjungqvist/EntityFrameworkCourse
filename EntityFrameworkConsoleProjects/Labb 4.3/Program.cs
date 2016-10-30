@@ -10,12 +10,8 @@ namespace Labb_4._3
     {
         static void Main(string[] args)
         {
-            var DB = new BookDBHelper();
-
-            var authors = DB.GetAuthorThatStartsWith("as");
-
-            authors.ForEach(x => Console.WriteLine(x.FirstName));
-            Console.ReadKey();
+            var application = new Application();
+            application.Run();
         }
     }
 }

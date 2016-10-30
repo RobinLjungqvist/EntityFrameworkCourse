@@ -31,5 +31,38 @@ namespace Labb_4._3
 
             return result;
         }
+
+        public static PaymentMethods GetPaymentMethod()
+        {
+            do
+            {
+                Console.WriteLine("Please choose a payment method for the author");
+                Console.WriteLine($"1. {PaymentMethods.Bank}");
+                Console.WriteLine($"2. {PaymentMethods.Cash}");
+                Console.WriteLine($"3. {PaymentMethods.Card}");
+
+                var key = Console.ReadKey(true);
+
+                switch (key.Key)
+                {
+                    case ConsoleKey.D1:
+                        return PaymentMethods.Bank;
+                    case ConsoleKey.D2:
+                        return PaymentMethods.Cash;
+                    case ConsoleKey.D3:
+                        return PaymentMethods.Card;
+                    default:
+                        Console.Clear();
+                        Console.WriteLine("You must choose a valid payment method.");
+                        break;
+                }
+            } while (true);
+
+            
+
+
+        }
+
+
     }
 }
