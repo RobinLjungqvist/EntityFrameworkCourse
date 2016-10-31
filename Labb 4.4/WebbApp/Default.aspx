@@ -3,6 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
+                                              <%--Viktigt!! -->------------->-------------->------------> DataKeyNames måste vara med för att delete funktionaliteten ska fungera.--%>
         <asp:ListView ID="ListView1" runat="server" DataSourceID="Books" InsertItemPosition="LastItem" DataKeyNames="BookID">
             <AlternatingItemTemplate>
                 <tr style="background-color:#FFF8DC; ">
@@ -25,7 +26,7 @@
                         <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" />
                     </td>
                     <td>
-                        <asp:TextBox ID="BookIDTextBox" runat="server" Text='<%# Bind("BookID") %>'/>
+                        <%--<asp:TextBox ID="BookIDTextBox" runat="server" Text='<%# Bind("BookID") %>' Enabled="False"/>--%>
                     </td>
                     <td>
                         <asp:TextBox ID="BookNameTextBox" runat="server" Text='<%# Bind("BookName") %>' />
@@ -46,7 +47,7 @@
                         <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Clear" />
                     </td>
                     <td>
-                        <asp:TextBox ID="BookIDTextBox" runat="server" Text='<%# Bind("BookID") %>'/>
+                        <%--<asp:TextBox ID="BookIDTextBox" runat="server" Text='<%# Bind("BookID") %>' Enabled="False"/>--%>
                     </td>
                     <td>
                         <asp:TextBox ID="BookNameTextBox" runat="server" Text='<%# Bind("BookName") %>' />
