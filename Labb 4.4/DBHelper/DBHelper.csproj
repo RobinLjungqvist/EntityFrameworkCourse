@@ -76,6 +76,7 @@
     <Compile Include="Movie.cs">
       <DependentUpon>MediaDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="MovieModel.cs" />
     <Compile Include="Paper.cs">
       <DependentUpon>MediaDB.tt</DependentUpon>
     </Compile>

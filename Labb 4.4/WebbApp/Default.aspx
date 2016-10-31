@@ -1,8 +1,6 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebbApp._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
-    <div class="jumbotron">
                                               <%--Viktigt!! -->------------->-------------->------------> DataKeyNames måste vara med för att delete funktionaliteten ska fungera.--%>
         <asp:ListView ID="ListView1" runat="server" DataSourceID="Books" InsertItemPosition="LastItem" DataKeyNames="BookID">
             <AlternatingItemTemplate>
@@ -105,7 +103,6 @@
             </SelectedItemTemplate>
         </asp:ListView>
         <asp:ObjectDataSource ID="Books" runat="server" SelectMethod="GetAllBooks" DataObjectTypeName="DBHelper.Book" TypeName="DBHelper.BookModel" UpdateMethod="UpdateBook" DeleteMethod="BookDelete" InsertMethod="InsertBook" OnSelecting="Books_Selecting"></asp:ObjectDataSource>
-    </div>
 
     <div class="row">
         <div class="col-md-4">

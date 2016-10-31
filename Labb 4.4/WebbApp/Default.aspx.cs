@@ -12,7 +12,6 @@ namespace WebbApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
         }
 
         protected void Books_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)

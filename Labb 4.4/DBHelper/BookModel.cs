@@ -11,9 +11,10 @@ namespace DBHelper
         public static Entities ctx = new Entities();
         public static IEnumerable<Book> GetAllBooks()
         {
-
+            
                 var books = ctx.Books.Select(x => x);
                 return books;
+            
 
         }
         public static void UpdateBook(Book book)
