@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab1.1.3 DatabaseFirst", "EntityFrameworkConsoleProjects\Lab1.1.3 DatabaseFirst.csproj", "{0745E37F-10F7-4769-A05E-090335749E44}"
 EndProject
@@ -21,7 +21,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labb 3.4.2 - 4.2", "Labb 3.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labb 4.3", "Labb 4.3\Labb 4.3.csproj", "{C415302A-8C7A-4195-B48E-DA2836A70A78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labb5", "Labb5\Labb5.csproj", "{2CAD26D7-42AF-4B73-BBB6-CC5A0E739B1A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labb 5", "Labb5\Labb 5.csproj", "{2CAD26D7-42AF-4B73-BBB6-CC5A0E739B1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labb 6", "Labb 6\Labb 6.csproj", "{62AD2774-02BF-4EF3-AB42-DFDB31322024}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{2CAD26D7-42AF-4B73-BBB6-CC5A0E739B1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CAD26D7-42AF-4B73-BBB6-CC5A0E739B1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CAD26D7-42AF-4B73-BBB6-CC5A0E739B1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62AD2774-02BF-4EF3-AB42-DFDB31322024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62AD2774-02BF-4EF3-AB42-DFDB31322024}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62AD2774-02BF-4EF3-AB42-DFDB31322024}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62AD2774-02BF-4EF3-AB42-DFDB31322024}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
