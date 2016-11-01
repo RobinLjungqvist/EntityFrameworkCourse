@@ -50,19 +50,19 @@ namespace Labb5
 
             //Uppgift 6
 
-            Employee[] employeeArray = new Employee[4];
+            //Employee[] employeeArray = new Employee[4];
 
-            employeeArray[0] = new Employee("Kalle", DateTime.Now, 1);
-            employeeArray[1] = new Employee("Lisa", DateTime.Now, 2);
-            employeeArray[2] = new Employee("Algot", DateTime.Now, 3);
-            employeeArray[3] = new Employee("Anna", DateTime.Now, 4);
-
-
-
-            var employee = Array.Find(employeeArray, FindNameLisa);
+            //employeeArray[0] = new Employee("Kalle", DateTime.Now, 1);
+            //employeeArray[1] = new Employee("Lisa", DateTime.Now, 2);
+            //employeeArray[2] = new Employee("Algot", DateTime.Now, 3);
+            //employeeArray[3] = new Employee("Anna", DateTime.Now, 4);
 
 
-            Console.WriteLine(employee.Name);
+
+            //var employee = Array.Find(employeeArray, FindNameLisa);
+
+
+            //Console.WriteLine(employee.Name);
 
             Console.ReadKey();
         }
@@ -96,7 +96,7 @@ namespace Labb5
                         select new XElement("Process", new XAttribute("Name", p.ProcessName), new XAttribute("PID", p.Id));
 
             var xml = new XElement("Processes", query);
-            //Console.WriteLine(xml);
+            Console.WriteLine(xml);
 
             IEnumerable<int> pids = from e in xml.Descendants()
                                     where e.Attribute("Name").Value == "devenv"
