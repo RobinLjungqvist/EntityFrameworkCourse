@@ -41,7 +41,7 @@ namespace Labb_6
                     Console.WriteLine("Please enter a name to search for: ");
                     var searchTerm = Console.ReadLine();
 
-                    var student = ctx.Students.Where(x => x.FirstMidName.StartsWith(searchTerm)).Include(x => x.Enrollments.Select(c => c.Course)).FirstOrDefault();
+                    var student = ctx.Students.Where(x => x.FirstMidName.StartsWith(searchTerm)).FirstOrDefault();/*.Include(x => x.Enrollments.Select(c => c.Course)).FirstOrDefault();*/
 
 
                     if (student != null)
@@ -49,8 +49,10 @@ namespace Labb_6
 
                         Console.WriteLine($"ID: {student.ID} Name: {student.FirstMidName} {student.LastName}");
                         Console.WriteLine("--------------------------------------------------------");
+                        ctx.Entry(student).Collection(x => x.Enrollments).Load();
                         foreach (var enrollment in student.Enrollments)
                         {
+                            ctx.Entry(enrollment).Reference(x => x.Course).Load();
                             Console.WriteLine($"Enrollment in {enrollment.Name} id: {enrollment.ID}\nCourse: {enrollment.Course.Name} Course ID: {enrollment.Course.ID} Grade: {enrollment.Grade}");
                             Console.WriteLine("--------------------------------------------------------");
                         }
