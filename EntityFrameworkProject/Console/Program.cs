@@ -12,10 +12,7 @@ namespace ConsoleApp
 
         static void Main(string[] args)
         {
-            while (true)
-            {
-
-            }
+            
             var control = new StudentControl();
 
             var students = control.GetAllStudents();
