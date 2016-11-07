@@ -15,7 +15,7 @@ namespace Labb_6
             using (var ctx = new SchoolContext())
             {
 
-                var students = ctx.Students.Include(x => x.Enrollments.Select(c=>c.Course));
+                var students = ctx.Students.Include(x => x.Enrollments.Select(c => c.Course));
 
                 foreach (var student in students)
                 {
@@ -61,7 +61,7 @@ namespace Labb_6
                     else
                     {
                         Console.WriteLine("No user was found with that name.");
-                    } 
+                    }
                 }
 
             }
