@@ -86,5 +86,14 @@ namespace WebformsProject
 
             Response.Redirect($"EditStudent.aspx?StudentID={studentID}");
         }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            LinkButton lb = (LinkButton)sender;
+
+            int studentID = int.Parse(lb.CommandArgument);
+
+            Response.Redirect($"Course.aspx?StudentID={studentID}");
+        }
     }
 }

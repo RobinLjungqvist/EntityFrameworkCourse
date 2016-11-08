@@ -13,6 +13,11 @@
             <asp:GridView ID="GridViewStudents" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
+                    <asp:TemplateField HeaderText="Select" ShowHeader="False">
+                        <ItemTemplate>
+                            <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Select" CommandArgument='<%# Eval("studentID") %>' OnClick="LinkButton1_Click" Text="Select"></asp:LinkButton>
+                        </ItemTemplate>
+                    </asp:TemplateField>
                     <asp:BoundField DataField="studentID" Visible="False" />
                     <asp:BoundField DataField="firstname" HeaderText="First Name" />
                     <asp:BoundField DataField="lastname" HeaderText="Last Name" />

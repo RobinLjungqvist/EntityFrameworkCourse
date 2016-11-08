@@ -143,7 +143,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Courses.aspx" />
+    <Content Include="AttendancePage.aspx" />
+    <Content Include="Course.aspx" />
     <Content Include="EditStudent.aspx" />
     <Content Include="Education.aspx" />
     <Content Include="AddStudent.aspx" />
@@ -210,12 +211,19 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Courses.aspx.cs">
-      <DependentUpon>Courses.aspx</DependentUpon>
+    <Compile Include="AttendancePage.aspx.cs">
+      <DependentUpon>AttendancePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Courses.aspx.designer.cs">
-      <DependentUpon>Courses.aspx</DependentUpon>
+    <Compile Include="AttendancePage.aspx.designer.cs">
+      <DependentUpon>AttendancePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Course.aspx.cs">
+      <DependentUpon>Course.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Course.aspx.designer.cs">
+      <DependentUpon>Course.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditStudent.aspx.cs">
       <DependentUpon>EditStudent.aspx</DependentUpon>

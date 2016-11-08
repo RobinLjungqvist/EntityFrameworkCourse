@@ -26,16 +26,8 @@ namespace EntityFrameworkProject
 
         public void InsertorUpdateCourse(Courses course)
         {
-            if(course.Id != 0)
-            {
-                ctx.Courses.Attach(course);
-            }
-            else
-            {
-                ctx.Entry(course).State = EntityState.Modified;
-            }
-
-            ctx.SaveChanges();
+                ctx.Courses.Add(course);
+                ctx.SaveChanges();
 
         }
 
